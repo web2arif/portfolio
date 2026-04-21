@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arif Mohammad</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">AM</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#cv">CV</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-line"></div>
+    <p class="hero-eyebrow">Portfolio — Arif Mohammad</p>
+    <h1 class="hero-name">Data Analyst<br><span>&amp;</span> Developer</h1>
+    <p class="hero-urdu">عارف محمد</p>
+    <p class="hero-role">
+      <span>Hyderabad</span> → Dijon, France &nbsp;·&nbsp;
+      MSc Data Science, Burgundy School of Business
+    </p>
+    <p class="hero-desc">
+      I build things end-to-end — NLP pipelines, Power BI dashboards, deployed mobile apps, and animated web experiences. Rooted in Hyderabad, working in France, fluent in data and code.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn-primary">View Projects</a>
+      <a href="#contact" class="btn-outline">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="sec-header reveal">
+      <span class="sec-label">Who I am</span>
+      <h2 class="sec-title">Built in Hyderabad,<br>Deployed in Europe</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I'm a data analyst and developer from <strong>Hyderabad, India</strong> — a city that has always lived at the intersection of ancient culture and modern technology. That duality is baked into how I work: I care about craft, precision, and finishing things properly.</p>
+        <p>My background spans a <strong>Bachelor of Engineering</strong> in Electronics from BIT Mesra, three years at Amazon, and a dual <strong>MSc in Data Science</strong> from Burgundy School of Business in Dijon. I've published an IEEE paper, shipped a production iOS app, and built full analytics pipelines from scratch.</p>
+        <p>Outside of work I cook professionally — which has taught me more about timing, attention to detail, and delivering under pressure than any data project ever has.</p>
+      </div>
+      <div class="about-facts reveal">
+        <div class="fact-item">
+          <div class="fact-label">Based in</div>
+          <div class="fact-value">Dijon, Bourgogne, France</div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-label">Education</div>
+          <div class="fact-value">MSc Data Science — BSB<br>BEng Electronics — BIT Mesra</div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-label">Languages</div>
+          <div class="fact-value">English · French · Hindi<br>Hyderabadi Urdu · Learning Farsi</div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-label">Published</div>
+          <div class="fact-value">IEEE ICBSII 2017 — Parkinson's<br>Disease Voice Detection</div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-label">Also</div>
+          <div class="fact-value">Professional chef · Process miner<br>Celonis &amp; Alteryx certified</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="sec-header reveal">
+      <span class="sec-label">What I've built</span>
+      <h2 class="sec-title">Projects</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="proj-tabs reveal">
+      <button class="proj-tab active" onclick="filterProjects(event, 'all')">All</button>
+      <button class="proj-tab" onclick="filterProjects(event, 'data')">Data &amp; Analytics</button>
+      <button class="proj-tab" onclick="filterProjects(event, 'web')">Web &amp; Engineering</button>
+    </div>
+    <div class="proj-grid" id="proj-grid">
+
+      <div class="proj-card reveal" data-cat="data">
+        <div class="proj-number">01</div>
+        <div class="proj-tag">NLP · BI · Pipeline</div>
+        <h3 class="proj-title">Friends TV Show — End-to-End Analytics</h3>
+        <p class="proj-desc">Full data pipeline: scraped 54,008 dialogue lines, dual NLP enrichment (VADER + HuggingFace DistilRoBERTa, 7 emotion classes), 6 aggregated datasets, and a 6-page Power BI dashboard with DAX measures and character-coded palette.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">Python</span><span class="stack-tag">VADER</span><span class="stack-tag">HuggingFace</span><span class="stack-tag">Power BI</span><span class="stack-tag">DAX</span><span class="stack-tag">Web Scraping</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/web2arif" class="proj-link" target="_blank">→ GitHub</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal" data-cat="web">
+        <div class="proj-number">02</div>
+        <div class="proj-tag">Full-Stack · Mobile · Deployed</div>
+        <h3 class="proj-title">Vinandi — Real-Time Translation App</h3>
+        <p class="proj-desc">Production iOS app: React Native/Expo frontend + Node.js/Express backend on Railway. Full audio pipeline: Google Cloud STT → Translate → TTS, with ElevenLabs fallback for Farsi. Confirmed working on device.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">React Native</span><span class="stack-tag">Node.js</span><span class="stack-tag">Google Cloud</span><span class="stack-tag">ElevenLabs</span><span class="stack-tag">Railway</span><span class="stack-tag">Expo</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/web2arif" class="proj-link" target="_blank">→ GitHub</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal" data-cat="data">
+        <div class="proj-number">03</div>
+        <div class="proj-tag">Power BI · DAX · 250K Records</div>
+        <h3 class="proj-title">Olympics Historical Dashboard</h3>
+        <p class="proj-desc">Interactive Power BI dashboard over 250,000+ athlete records spanning 120+ years. Country-level drill-downs, medal trend analysis, DAX-calculated KPIs, and Power Query normalisation across inconsistent historical schemas.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">Power BI</span><span class="stack-tag">DAX</span><span class="stack-tag">Power Query</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/web2arif" class="proj-link" target="_blank">→ GitHub</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal" data-cat="web">
+        <div class="proj-number">04</div>
+        <div class="proj-tag">React · GSAP · Animation</div>
+        <h3 class="proj-title">Animated Portfolio Website</h3>
+        <p class="proj-desc">Personal portfolio built with React.js, custom GSAP transitions, hand-crafted SVG animations, and a modular component architecture. Focused on easing curves and micro-timing — deployed live on Netlify.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">React.js</span><span class="stack-tag">GSAP</span><span class="stack-tag">SVG</span><span class="stack-tag">Netlify</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/web2arif" class="proj-link" target="_blank">→ GitHub</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal" data-cat="data">
+        <div class="proj-number">05</div>
+        <div class="proj-tag">R Shiny · Interactive</div>
+        <h3 class="proj-title">Baseball Analytics Dashboard</h3>
+        <p class="proj-desc">Interactive R Shiny web app visualising 50,000+ game records with advanced ggplot2 charts and dynamic filters. Full R analytics stack from raw data to deployed interactive dashboard.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">R</span><span class="stack-tag">R Shiny</span><span class="stack-tag">ggplot2</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://github.com/web2arif" class="proj-link" target="_blank">→ GitHub</a>
+        </div>
+      </div>
+
+      <div class="proj-card reveal" data-cat="data">
+        <div class="proj-number">06</div>
+        <div class="proj-tag">Power BI · 500K Records</div>
+        <h3 class="proj-title">Renewable Energy Dashboard</h3>
+        <p class="proj-desc">Analysed 500,000+ energy records to visualise Europe's renewable energy transition — capacity growth, investment patterns, country comparisons. Group project, published on LinkedIn.</p>
+        <div class="proj-stack">
+          <span class="stack-tag">Power BI</span><span class="stack-tag">Trend Analysis</span>
+        </div>
+        <div class="proj-links">
+          <a href="https://www.linkedin.com/in/" class="proj-link" target="_blank">→ LinkedIn</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="sec-header reveal">
+      <span class="sec-label">What I work with</span>
+      <h2 class="sec-title">Skills</h2>
+      <div class="sec-rule"></div>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group reveal">
+        <div class="skill-group-title">Data &amp; Analytics</div>
+        <div class="skill-list">
+          <div class="skill-item"><span>Python</span> — Pandas, NLTK, HuggingFace, Scikit-learn, TensorFlow</div>
+          <div class="skill-item"><span>SQL</span> — ETL pipelines, 10M+ records</div>
+          <div class="skill-item"><span>R</span> — ggplot2, R Shiny, statistical modelling</div>
+          <div class="skill-item">NLP · Sentiment Analysis · Web Scraping</div>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-title">Business Intelligence</div>
+        <div class="skill-list">
+          <div class="skill-item"><span>Power BI</span> — DAX, Power Query, data modelling</div>
+          <div class="skill-item"><span>Tableau</span> — interactive dashboards</div>
+          <div class="skill-item">Matplotlib · ggplot2 · data visualisation</div>
+          <div class="skill-item">Celonis Process Mining · Alteryx</div>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-title">Web &amp; Engineering</div>
+        <div class="skill-list">
+          <div class="skill-item"><span>React.js</span> — GSAP, SVG animation, components</div>
+          <div class="skill-item"><span>React Native / Expo</span> — iOS deployment</div>
+          <div class="skill-item"><span>Node.js / Express</span> — REST APIs, Railway</div>
+          <div class="skill-item">Google Cloud · ElevenLabs · Netlify · GitHub</div>
+        </div>
+      </div>
+      <div class="skill-group reveal">
+        <div class="skill-group-title">Languages</div>
+        <div class="skill-list">
+          <div class="skill-item"><span>English</span> — C2</div>
+          <div class="skill-item"><span>French</span> — A2+ (en progression)</div>
+          <div class="skill-item"><span>Hindi / Hyderabadi Urdu</span> — C2</div>
+          <div class="skill-item"><span>Farsi / Telugu</span> — working knowledge</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CV -->
+  <section id="cv">
+    <div class="cv-inner reveal">
+      <h2 class="cv-title">Download My CV</h2>
+      <p class="cv-desc">Two versions available — one focused on Data Analytics &amp; BI, one on Web &amp; Full-Stack Development. Same projects, different lens.</p>
+      <div class="cv-btns">
+        <a href="#" class="btn-primary">Data Analyst CV</a>
+        <a href="#" class="btn-outline">Web Developer CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-grid">
+      <div class="contact-text">
+        <div class="sec-header reveal">
+          <span class="sec-label">Get in touch</span>
+          <h2 class="sec-title">Let's Work<br>Together</h2>
+          <div class="sec-rule"></div>
+        </div>
+        <p class="reveal">Open to Data Analyst, BI Developer, and Frontend / Full-Stack roles. Based in Dijon, available immediately.</p>
+        <div class="contact-links reveal">
+          <a href="mailto:arif15031995@gmail.com" class="contact-link">
+            <div class="contact-link-icon">✉</div>
+            <div class="contact-link-text">
+              <span class="contact-link-label">Email</span>
+              <span class="contact-link-value">arif15031995@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://github.com/web2arif" class="contact-link" target="_blank">
+            <div class="contact-link-icon" style="font-size:13px;">GH</div>
+            <div class="contact-link-text">
+              <span class="contact-link-label">GitHub</span>
+              <span class="contact-link-value">github.com/web2arif</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/arif-mohammad" class="contact-link" target="_blank">
+            <div class="contact-link-icon" style="font-size:11px; font-weight:500;">in</div>
+            <div class="contact-link-text">
+              <span class="contact-link-label">LinkedIn</span>
+              <span class="contact-link-value">linkedin.com/in/arif-mohammad</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="reveal" style="padding-top:1rem;">
+        <div class="roots-quote">
+          <p>"Hyderabad taught me that the most beautiful things are built at the intersection of tradition and innovation."</p>
+          <small>Arif Mohammad · Dijon, 2025</small>
+        </div>
+        <div style="margin-top:1.5rem; background:var(--card); border:0.5px solid var(--border); padding:1.5rem;">
+          <div class="fact-label" style="margin-bottom:1rem;">Currently available for</div>
+          <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+            <span style="font-size:0.72rem; padding:0.3rem 0.75rem; border:0.5px solid rgba(13,148,136,0.3); color:var(--teal-light);">Data Analyst</span>
+            <span style="font-size:0.72rem; padding:0.3rem 0.75rem; border:0.5px solid rgba(13,148,136,0.3); color:var(--teal-light);">BI Developer</span>
+            <span style="font-size:0.72rem; padding:0.3rem 0.75rem; border:0.5px solid rgba(13,148,136,0.3); color:var(--teal-light);">Frontend Developer</span>
+            <span style="font-size:0.72rem; padding:0.3rem 0.75rem; border:0.5px solid rgba(13,148,136,0.3); color:var(--teal-light);">Full-Stack Engineer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Arif Mohammad &nbsp;·&nbsp; Dijon, France &nbsp;·&nbsp; Built with intention</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
