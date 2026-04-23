@@ -16,8 +16,8 @@ window.addEventListener('mouseleave', () => {
 
 function resize() {
   const dpr = window.devicePixelRatio || 1;
-  const W = window.screen.width;
-  const H = window.screen.height;
+  const W = window.innerWidth;
+  const H = window.innerHeight;
 
   canvas.width  = W * dpr;
   canvas.height = H * dpr;
