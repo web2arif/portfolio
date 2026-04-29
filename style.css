@@ -546,11 +546,17 @@ footer {
 @media (max-width: 768px) {
   nav { padding: 1rem 1.5rem; }
   .nav-links { display: none; }
-  #hero { padding: 5rem 1.5rem 3rem; }
-  section { padding: 3.5rem 1.5rem; }
+  #hero { padding: 5rem 1.25rem 3rem; }
+  section { padding: 3.5rem 1.25rem; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .hero-line { display: none; }
+  .hero-name {
+    font-size: clamp(2.4rem, 11vw, 5rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
 }
+
 .about-text p,
 .proj-desc,
 .skill-item,

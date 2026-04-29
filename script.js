@@ -23,6 +23,9 @@ function resize() {
   canvas.height = H * dpr;
   canvas.style.width  = W + 'px';
   canvas.style.height = H + 'px';
+
+  // Map logical coordinates to physical buffer pixels
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 }
 
 function drawCell(cx, cy, R, phase, influence) {
@@ -101,9 +104,10 @@ function draw(timestamp) {
   const W = canvas.width / dpr;
   const H = canvas.height / dpr;
 
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // Logical coordinates — work in CSS pixels, the setTransform handles DPR
+  ctx.clearRect(0, 0, W, H);
   ctx.fillStyle = '#0d1117';
-  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.fillRect(0, 0, W, H);
 
   const R = 40;
   const hexW = Math.sqrt(3) * R;
